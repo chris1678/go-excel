@@ -1,10 +1,10 @@
 # go-excel
 
-一套代码同时读取xls和xlsx
-使用教程
+One set of code to read xls and xlsx at the same time
+Usage tutorial
 
-支持读取文件和读取文件流
-
+Supports reading files and reading file streams
+```
     Import(filename string)
     ImportByReader(reader io.Reader, fileType string)
 
@@ -17,9 +17,9 @@
     for _, row := range rows {
     ...
     }
-
+```
 or
-
+```
     for d, s := range file.GetSheetsName() {
         rows, err := file.GetRow(s)
         if err != nil {
@@ -29,3 +29,4 @@ or
             --your code
         }
     }
+```
